@@ -20,9 +20,7 @@ export class SigupComponent {
       });
   }
 
-  register(){
-    console.log(this.signupForm.value);
-
+  onRegister(){
     this.service.signup(this.signupForm.value).subscribe((res) => {
       console.log(res);
     }); 
