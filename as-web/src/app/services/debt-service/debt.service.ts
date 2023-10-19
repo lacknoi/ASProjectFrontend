@@ -1,19 +1,25 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StorageService } from '../storage-service/storage.service';
 import { Observable } from 'rxjs';
+import { StorageService } from '../storage-service/storage.service';
 
-const BASIC_URL = ["http://localhost:8082/api/accountservice/mobile"];
+const BASIC_URL = ["http://localhost:8084/api/debt"];
 
 @Injectable({
   providedIn: 'root'
 })
-export class MobileService {
+export class DebtService {
 
   constructor(private http: HttpClient) { }
 
-  getAllMobile(): Observable<any>{
-    return this.http.get<[]>(BASIC_URL + "/mobiles", {
+  getAllCriterias(): Observable<any>{
+    return this.http.get<[]>(BASIC_URL + "/criterias", {
+      headers: this.createAuthorizationHeader()
+    })
+  }
+
+  createCriteria(criteria:any):Observable<any>{
+    return this.http.post<[]>(BASIC_URL + "/createCriteria", criteria, {
       headers: this.createAuthorizationHeader()
     })
   }

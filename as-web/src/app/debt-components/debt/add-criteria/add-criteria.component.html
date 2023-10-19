@@ -1,0 +1,27 @@
+<div>
+    <h2>Create Criteria</h2>
+    <form [formGroup]="criteriaForm" (ngSubmit)="onCreateCriteria()">
+      <div class="form-group">
+        <label for="modeId">ModeId</label>
+        <input type="text" id="modeId" formControlName="modeId">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" formControlName="description">
+      </div>
+  
+      <div class="form-group">
+        <label for="debtMnyFrom">DebtMnyFrom</label>
+        <input type="text" id="debtMnyFrom" formControlName="debtMnyFrom">
+      </div>
+  
+      <div class="form-group">
+        <label for="debtMnyTo">DebtMnyTo</label>
+        <input type="text" id="debtMnyTo" formControlName="debtMnyTo">
+      </div>
+  
+      <button type="submit" [disabled]="!criteriaForm.valid">Sign Up</button>
+    </form>
+  </div>
+  

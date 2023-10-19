@@ -8,6 +8,10 @@ import { SigupComponent } from './auth-components/sigup/sigup.component';
 import { LoginComponent } from './auth-components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddMessageComponent } from './debt-components/sms/add-message/add-message.component';
+import { AddCriteriaComponent } from './debt-components/debt/add-criteria/add-criteria.component';
+import { MobileListComponent } from './profile-component/mobile/mobile-list/mobile-list.component';
+import { CriteriaListComponent } from './debt-components/debt/criteria-list/criteria-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     SigupComponent,
     LoginComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddMessageComponent,
+    AddCriteriaComponent,
+    MobileListComponent,
+    CriteriaListComponent
   ],
   imports: [
     BrowserModule,

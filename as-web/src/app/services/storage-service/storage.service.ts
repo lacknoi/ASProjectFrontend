@@ -23,4 +23,17 @@ export class StorageService {
   static getToken(): any{
     return localStorage.getItem(TOKEN);
   }
+
+  static isLogin(): boolean{
+     if(this.getToken() != null){
+      return true;
+     }else{
+      return false;
+     }
+  }
+
+  static signOut():void{
+    window.localStorage.removeItem(TOKEN);
+    window.localStorage.removeItem(USER);
+  }
 }
