@@ -1,1 +1,11 @@
-<p>criteria-list works!</p>
+<div>
+    <div *ngFor="let criteria of criterias">
+        <div>
+            {{criteria.modeId}}
+            {{criteria.preassignId}}
+            
+            <button>View</button>
+            <button routerLink="/criteria/{{criteria.criteriaId}}">Edit</button>
+        </div>
+    </div>
+</div>

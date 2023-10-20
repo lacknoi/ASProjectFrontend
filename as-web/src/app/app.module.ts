@@ -12,6 +12,7 @@ import { AddMessageComponent } from './debt-components/sms/add-message/add-messa
 import { AddCriteriaComponent } from './debt-components/debt/add-criteria/add-criteria.component';
 import { MobileListComponent } from './profile-component/mobile/mobile-list/mobile-list.component';
 import { CriteriaListComponent } from './debt-components/debt/criteria-list/criteria-list.component';
+import { CriteriaDetailComponent } from './debt-components/debt/criteria-detail/criteria-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CriteriaListComponent } from './debt-components/debt/criteria-list/crit
     AddMessageComponent,
     AddCriteriaComponent,
     MobileListComponent,
-    CriteriaListComponent
+    CriteriaListComponent,
+    CriteriaDetailComponent
   ],
   imports: [
     BrowserModule,

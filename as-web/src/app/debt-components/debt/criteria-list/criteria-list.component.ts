@@ -20,7 +20,7 @@ export class CriteriaListComponent {
     this.service.getAllCriterias().subscribe((res) => {
       console.log(res);
 
-      // this.criterias = res.data;
+       this.criterias = res.data;
     }); 
   }
 }
